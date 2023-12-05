@@ -1,5 +1,5 @@
 ---
-title: 'Vue核心'
+title: 'Vue组件化编程'
 date: '2023-04-17 02:09:21'
 tags: ['Vue']
 language: 'zh-cn'

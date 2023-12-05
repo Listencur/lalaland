@@ -1,0 +1,23 @@
+---
+import { basePages } from '../../sitemap';
+import HeaderLink from './HeaderLink.astro';
+---
+
+<header
+  class="flex gap-2 text-sm sm:text-base sm:gap-6 py-4 sticky top-0 bg-white dark:bg-black"
+>
+  {basePages.map((link) => <HeaderLink href={link} />)}
+  <div class="grow"></div>
+  <HeaderLink href="https://github.com/Listencur">
+    <i class="ri-github-fill"></i>
+  </HeaderLink>
+  <!-- <HeaderLink href="https://www.baidu.com">
+    <i class="ri-twitter-fill"></i>
+  </HeaderLink>
+  <HeaderLink href="https://www.baidu.com">
+    <i class="ri-discord-fill"></i>\
+  </HeaderLink> -->
+  <HeaderLink href="/blog.xml">
+    <i class="ri-rss-fill"></i>
+  </HeaderLink>
+</header>

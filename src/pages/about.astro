@@ -1,0 +1,32 @@
+---
+import Comment from '../components/Comment.astro';
+import Link from '../components/Link.astro';
+import Layout from '../layouts/Layout.astro';
+
+const lastModifiedDate = new Date('2023-12-1');
+---
+
+<Layout title="About">
+  <div class="dark:text-white space-y-4">
+    <h1 class="text-4xl font-bold">Best Wishes🌞</h1>
+    <h2 class="text-xl font-semibold">Im nobody</h2>
+    <img src="" alt="" />
+    <h2 class="text-xl font-semibold">
+      You are my today and all of my tomorrows
+    </h2>
+    <img
+      src="https://seconbucket-qiaozhiqian.oss-cn-shanghai.aliyuncs.com/img-picgo/Snipaste_2023-12-01_16-46-09.png"
+      alt=""
+      style="width:300px height:300px"
+    />
+    <div class="text-end text-sm" style="font-family: -apple-system">
+      最后编辑时间&nbsp;:&nbsp;&nbsp;
+      <!-- 时间 -->
+      <time datetime={lastModifiedDate.toISOString()}>
+        {lastModifiedDate.toDateString()}
+      </time>
+    </div>
+  </div>
+  <Comment />
+  <!-- Github评论 -->
+</Layout>

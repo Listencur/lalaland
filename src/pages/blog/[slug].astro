@@ -15,6 +15,7 @@ const post = (await getEntryBySlug('blog', slug!))!;
 const { Content } = await post.render();
 
 const ISODate = post.data.date.toISOString();
+
 ---
 
 <Layout
@@ -23,6 +24,8 @@ const ISODate = post.data.date.toISOString();
   article={{ tags: post.data.tags, date: ISODate }}
   language={post.data.language}
 >
+<!-- <p style="background-color: aqua;">123</p> -->
+
   <h1 class="text-center font-bold text-4xl dark:text-white">
     {post.data.title}
   </h1>
